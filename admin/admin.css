@@ -1,0 +1,561 @@
+body{
+  background-color: rgb(231, 231, 223);
+  margin: 0;
+  padding: 0;
+  min-height: 170vh;
+}
+
+/*============= Header =============*/
+
+header{
+  background-color: #1f2833;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  
+}
+
+.left-section{
+  
+  width: 190.297px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.middle-section{
+  
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 15%;
+  margin-right: 15%;
+  
+  
+}
+
+.right-section{
+ 
+  width: 190.297px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+
+#logo{
+  width: 200px; 
+}
+
+#search-box{
+  border: 0;
+  border-radius: 20px;
+  flex: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline-color: rgb(229, 219, 186);;
+  width: 0;
+  padding-left: 15px;
+}
+
+#user{
+  width:32px;
+  
+  
+}
+
+#user:hover{
+  width: 33px;
+}
+
+.clients{
+margin-right: -50px;
+}
+
+#settings{
+  width: 26px;
+  
+}
+
+#settings:hover{
+  width: 27px;
+}
+
+/*============= End of Header ==========*/
+
+/*============== Navbar ============*/
+
+.container{
+  width: 50%;
+  background-color: #c2cad0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.navbar-div{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.link-div{
+  flex: 1;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  
+}
+
+
+.link-div:hover{
+ 
+    background-color:#d3d3d3;
+    cursor: pointer;
+    border: 1px solid #b3b1b1;
+}
+
+
+.container a{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  flex-shrink: 0;
+  padding-top: 10px;
+  font-weight: 500;
+  
+}
+
+a:hover{
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+
+/*================ End of Navbar ==============*/
+
+
+
+/*================ Start of MainPart =============*/
+
+.test{
+  width: 60%;
+  margin: 85px auto;
+  margin-bottom: 100px;
+  background-color: rgb(238, 238, 238);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20vh;
+
+ }
+ 
+ .row,
+ .extra-row{
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 36.25730994152047vh;
+ }
+
+
+ .extra-row{
+  background-color: rgb(231, 231, 223);
+ }
+
+.product-container4{
+  opacity: 0;
+ }
+ .product-container4:hover{
+  opacity: 0.5;
+ }
+ 
+
+ .addproduct{
+  padding: 7px 15px 7px 15px;
+  margin-left: 75px;
+  margin-top: 142px;
+ }
+
+ .addproduct:hover{
+  cursor: pointer; 
+  background-color: #e35227;
+  border: 1px solid red;
+  border-radius: 5px;
+ }
+ 
+ .product-container,
+ .product-container4{
+   width: 25%;
+   outline: 1px solid rgb(197, 197, 197);
+   height: 36.25730994152047vh;
+   
+ }
+ 
+ .product-container:hover,
+ .product-container4:hover{
+   outline: none;
+   background-color: white;
+   cursor: pointer;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+ }
+
+ .imagecontainer{
+  height: 150px;
+  
+}
+ 
+ #first-product{
+  max-width: 213px;
+   max-height: 130px;
+   padding-top: 18px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+   cursor: pointer;
+   
+ }
+ 
+ #second-product{
+   width: 130px;
+   height: 130px;
+   padding: 18px 80px;
+   cursor: pointer;
+   
+ }
+ 
+ #third-product{
+   padding: 18px 100px;
+   cursor: pointer;
+   width: 75px;
+   height: 130px;
+   
+ }
+ 
+ #fourth-product{
+   padding: 18px 35px;
+   cursor: pointer;
+   width: 210px;
+   height: 130px;
+   
+ }
+ 
+ #fifth-product{
+   width: 115px;
+   height: 130px;
+   padding: 18px 70px;
+   cursor: pointer;
+  
+ }
+ 
+ .product-text{
+   padding-top: 20px;
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-top: 15px;
+   height: 40px;
+ }
+ 
+ .product-text:hover{
+   cursor: pointer;
+   text-decoration: underline;
+ }
+ 
+ .price{
+   font-size: 20px;
+   padding-left: 5px;
+   font-weight: bold;
+   margin-top:20px;
+ }
+ 
+ .price:hover{
+   cursor:default;
+ }
+
+ .twoitem-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+ }
+
+ .edit{
+  margin-right: 10px;
+ }
+
+ .edit,
+ .delete{
+  padding: 4px 7px 4px 7px;
+ }
+
+ .edit:hover,
+ .delete:hover{
+  cursor: pointer; 
+  background-color: #e35227;
+  border: 1px solid red;
+  border-radius: 5px;
+ }
+
+
+ /*============== End of Main =========*/
+
+ /*============== Footer =================*/
+
+
+
+ .container-form{
+  
+  width: 70%;
+  margin:  100px auto;
+  background-color: #c2cad0;
+  align-items: center;
+  border-radius:15px ;
+}
+
+.container-form h1{
+  text-align: center;
+  padding-top: 50px;
+}
+
+#usersedit{
+width: 100%;
+ padding: 5%;
+}
+
+#usersedit input[type="email"],
+#usersedit input[type="text"],
+#usersedit input[type="date"],
+#usersedit input[type="password"],
+select{
+  height: 35px;
+    width: 80%;
+    border: 1px solid #03a9f6;
+}
+
+.register{
+  margin-top: 20px;
+  padding: 13px 30px 13px 30px;
+}
+
+.editicon{
+  background-color: rgb(231, 231, 223);
+}
+
+
+
+.container-form .register{
+  position: relative;
+  left: 43%;
+  margin-bottom: 20px;
+  
+}
+
+
+ #usersedit label{
+  
+  display: inline-block;
+  width: 10%;
+  height: 50px;
+} 
+
+#usersedit input[type="submit"]{
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  left: 32%;
+  right: 32%;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+#usersedit input[type="submit"]:hover{
+  cursor: pointer; 
+  background-color: #3f4d5e;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+
+
+
+.addtocart{
+  width: 31px;
+ }
+
+ .userinfo-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: -70px;
+  margin-left: 203px;
+ }
+
+ .cart-button,
+ .favorite-button,
+ .order-button{
+  height: 37px;
+  margin-bottom: 10px;
+
+ }
+
+ .cart-button:hover,
+ .favorite-button:hover,
+ .order-button:hover{
+ 
+
+  cursor: pointer; 
+  background-color: #3f4d5e;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+ 
+ }
+
+
+ /* USERS CSS */
+
+ #members{
+  
+ 
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+  /* empty-cells: show;  */
+  empty-cells: hide; 
+  border-spacing: 1px 2px;
+  border-collapse: separate;
+  margin-top: 100px;
+}
+#members td, #members th 
+{
+  border:1px solid #f3e3e3; 
+  padding:5px 9px 4px;
+}
+
+#members td{
+  background-color: #c2cad0;
+}
+#members th 
+{
+  text-align:left;
+  padding-top:6px;
+  padding-bottom:5px;
+  background-color:#1f2833;
+  color:#ffffff;
+}
+#members tr.alt td 
+{background-color:#adb3b3;}
+
+
+td a {
+  display:block;
+  width:100%;
+  text-decoration: none;
+  color: black;
+ 
+}
+
+.edituser{
+  width: 8px;
+  
+}
+
+.edituser:hover{
+  border: 2px solid #1f2833;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+#logout{
+  padding: 10px;
+  position: absolute;
+  left: 92.5%;
+  visibility: visible;
+  
+  
+  
+}
+
+#logout:hover{
+  background-color: #d3d3d3;
+  border: 2px solid #1f2833;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  #usersedit label{
+    display: block;
+    height: 20px;
+    margin-bottom: 1px;
+    width: 100%;
+  }
+}
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+ 
+	
+	td:before { 
+		/* Now like a table header */
+		/* position: absolute; */
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 30%;
+    margin-right: 30px;
+		padding-right: 10px; 
+		white-space: nowrap;
+    display: flex;
+	}
+
+  td:nth-of-type(1):before { content: "Email: "; }
+	td:nth-of-type(2):before { content: "First Name: "; }
+	td:nth-of-type(3):before { content: "Last Name: "; }
+	td:nth-of-type(4):before { content: "Address: "; }
+	td:nth-of-type(5):before { content: "Phone Number: "; }
+	td:nth-of-type(6):before { content: "Number of orders: "; }
+}
+
