@@ -19,7 +19,7 @@ if (isset($_GET['pid'])){
   }
 }
   
-
+// test comment
   if(isset($_POST['porosit'])){
     $perdoruesi = $_SESSION['perdoruesi']['email'];
     buyProducts($perdoruesi,$_GET['pid'],date('Y-m-d H:i:s'),$cmimi);
