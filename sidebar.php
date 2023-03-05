@@ -4,6 +4,43 @@
     <div class="text-div"><a href="#" class="link-sidebar">Home</a></div>
   </div>
 
+  <div class="sidebar-div" id="categories-link">
+      <div class="icon-div"><img src="images/Hamburger_icon.svg.png" class="icons"></div>
+      <div class="text-div"><a href="#" class="link-sidebar">Categories</a>
+        <aside class="categorysidebar">
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">Electronics</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">IT Shop</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">Smart Home</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">Lifestyle</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">Accessories</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">Offers</a></div>
+          </div>
+      
+          <div class="sidebar-div">
+            <div class="text-div2"><a href="#" class="link-sidebar">New</a></div>
+          </div>
+      
+         </aside>
+      </div>
+    </div>
+
+    
   <a href="favoriteproducts.php">
   <div class="sidebar-div" id="fav-link">
     <div id="favorite-container">
