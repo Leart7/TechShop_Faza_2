@@ -335,7 +335,7 @@ a:hover{
 
 #usersedit{
 width: 100%;
- padding: 5%;
+ /* padding: 5%; */
 }
 
 #usersedit input[type="email"],
@@ -343,6 +343,7 @@ width: 100%;
 #usersedit input[type="date"],
 #usersedit input[type="password"],
 select{
+  
   height: 35px;
     width: 80%;
     border: 1px solid #03a9f6;
@@ -368,7 +369,7 @@ select{
 
 
  #usersedit label{
-  
+  margin-left: 5%;
   display: inline-block;
   width: 10%;
   height: 50px;
@@ -376,11 +377,19 @@ select{
 
 #usersedit input[type="submit"]{
   padding: 10px 40px 10px 40px;
-  position: relative;
-  left: 32%;
-  right: 32%;
+  /* position: relative; */
+  /* left: 32%;
+  right: 32%; */
   margin-bottom: 20px;
   margin-top: 30px;
+
+}
+
+#savedeletecontainer{
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  
 }
 
 #usersedit input[type="submit"]:hover{
@@ -401,8 +410,9 @@ select{
  .userinfo-container{
   display: flex;
   flex-direction: row;
-  margin-top: -70px;
-  margin-left: 203px;
+  margin-top: -20px;
+  
+  justify-content: center;
  }
 
  .cart-button,
@@ -507,6 +517,19 @@ td a {
     margin-bottom: 1px;
     width: 100%;
   }
+
+  #usersedit input[type="submit"]{
+    padding: 10px 30px 10px 30px;
+  }
+
+  
+
+  #usersedit input[type="email"],
+#usersedit input[type="text"],
+#usersedit input[type="date"],
+#usersedit input[type="password"]{
+  width: 98%;
+}
 }
 
 

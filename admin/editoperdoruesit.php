@@ -50,8 +50,10 @@ if(isset($_POST['savechanges'])){
       <input type="text" name="adresa" id="adresa" value="<?php if(!empty($adresa)) echo $adresa ?>">
       <label>Numri i telefonit: </label>
       <input type="text" name="numritelefonit" id="numritelefonit" value="<?php if(!empty($telefoni)) echo $telefoni ?>">
-       <input type="submit" name="savechanges" id="savechanges" value="SAVE CHANGES">  
-     <input type="submit" name="deleteuser" id="deleteuser" value="DELETE USER">  
+      <div id="savedeletecontainer">
+        <input type="submit" name="savechanges" id="savechanges" value="SAVE CHANGES">  
+        <input type="submit" name="deleteuser" id="deleteuser" value="DELETE USER">  
+      </div>
     </form>
     <div class="userinfo-container">
     <?php 
