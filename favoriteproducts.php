@@ -6,11 +6,13 @@
     <table class="product-table">
 <?php 
     if(!isset($_SESSION['perdoruesi'])){
-      header("Location: index.php#rightfooter");
+      echo("<script>location.href = 'index.php#rightfooter'</script>");
     }
   if(isset($_SESSION['perdoruesi'])){
     $perdoruesi = $_SESSION['perdoruesi']['email'];
   }
+
+  //echo("<script>location.href = '".ADMIN_URL."/index.php?msg=$msg';</script>");
   $favorites = merrFavorites();
   $numriFavorites = numberofFavorites($perdoruesi);
   if($numriFavorites == 0){
