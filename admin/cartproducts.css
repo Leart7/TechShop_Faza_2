@@ -1,5 +1,5 @@
 .imagecontainer{
-  width: 30%;
+  width: 50%;
   
 }
 
@@ -75,6 +75,18 @@ td:hover{
    cursor: pointer;
  
  }
+
+ @media only screen and (max-width: 1200px) {
+    .cartfavoriteordercontainer{
+      width: 70%;
+    }
+ }
+
+ @media only screen and (max-width: 800px) {
+  .cartfavoriteordercontainer{
+    width: 90%;
+  }
+}
 
 
 

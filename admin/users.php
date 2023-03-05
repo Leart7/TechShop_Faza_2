@@ -6,7 +6,7 @@
     header("Location: ../index.php");
 }
 ?>
-
+<link rel="stylesheet" href="users.css">
 <table id="members">
   <thead>
     <tr>
