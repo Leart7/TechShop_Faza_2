@@ -11,7 +11,7 @@
   if(isset($_SESSION['perdoruesi'])){
     $perdoruesi = $_SESSION['perdoruesi']['email'];
   }
-        
+        //second change comment
        
   $carts = merrCart();
   $numriCart = numberofCarts($perdoruesi);
