@@ -326,6 +326,7 @@ a:hover{
   background-color: #c2cad0;
   align-items: center;
   border-radius:15px ;
+  padding-bottom: 20px;
 }
 
 .container-form h1{
@@ -385,6 +386,8 @@ select{
 
 }
 
+
+
 #savedeletecontainer{
   display: flex;
   justify-content: center;
@@ -400,6 +403,14 @@ select{
   border: 1px solid black;
 }
 
+#filediv{
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 20px; */
+  position: absolute;
+  top: 600px;
+  width: 70%;
+}
 
 
 
@@ -411,7 +422,6 @@ select{
   display: flex;
   flex-direction: row;
   margin-top: -20px;
-  
   justify-content: center;
  }
 

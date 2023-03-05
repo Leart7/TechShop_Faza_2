@@ -27,25 +27,31 @@ if(isset($_POST['shtoproduktin'])){
 
 <form id="usersedit" method="post">
   <input hidden type='text' name='id' id='id' value="<?php echo $resultnumber ?>"><br> 
-  <label>Product name: </label>
+  <label>Name: </label>
   <input type="text" name="emri" id="emri"><br>
   <label>Manufacturer: </label>
   <input type="text" name="prodhuesi" id="prodhuesi"><br>
-  <label>Production year:</label>
+  <label>Year:</label>
   <input type="text" name="vitiprodhimit" id="vitiprodhimit"><br>
-  <label>Product price:</label>
+  <label>Price:</label>
   <input type="text" name="cmimi" id="cmimi"><br>
   <label>Details: </label>
   <input type="text" name="pershkrimi" id="pershkrimi"><br>
   <label>Category:</label>
   <input type="text" name="kategoria" id="kategoria">
-  <input type="submit" name="shtoproduktin" id="addproduct" value="ADD PRODUCT">  
+  <div id="savedeletecontainer">
+    <input type="submit" name="shtoproduktin" id="addproduct" value="ADD PRODUCT">
+  </div>
+    
 </form>
 
 
   <form  method="post" enctype="multipart/form-data">
-    <input type="file" name="my_image">
-    <input type="submit" name="submit" value="Upload">
+    <div id="filediv">
+      <input type="file" name="my_image">
+      <input type="submit" name="submit" value="Upload">
+    </div>
+    
 
   </form>
 
