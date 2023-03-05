@@ -45,7 +45,7 @@
       <?php 
         if(isset($_SESSION['perdoruesi'])){
           echo  "<form method='post'>
-          <button type='submit' name='logout' id='btnlogout'><img src='images/logout_white.png' id='logoutbtn'></button>
+          <button type='submit' name='logout' id='btnlogout' style='background-color:#1f2833; border:none; cursor:pointer'><img src='images/logout_white.png' style='width:26px;margin-right:10px'></button>
           </form>";
           if(isset($_POST['logout'])){
             unset($_SESSION['perdoruesi']);

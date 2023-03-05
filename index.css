@@ -29,7 +29,7 @@ header{
 
 .left-section{
   
-  width: 10%;
+  width: 190.297px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,10 +50,11 @@ header{
 
 .right-section{
  
-  width: 10%;
+  width: 190.297px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
   
   
 }
@@ -71,6 +72,7 @@ header{
   padding-top: 10px;
   padding-bottom: 10px;
   outline-color: rgb(229, 219, 186);;
+  width: 0;
   padding-left: 15px;
 }
 
@@ -121,20 +123,21 @@ header{
   width: 27px;
 }
 
-#logoutbtn{
-  width:25px;
-  margin-top:14px;
-  margin-right:10px
+#logout{
+  padding: 10px;
+  position: absolute;
+  left: 92.5%;
+  visibility: visible;
+  
+  
+  
 }
 
-#logoutbtn:hover{
-  width: 26px;
-}
-
-#btnlogout{
-  background-color:#1f2833;
-   border:none; 
-   cursor:pointer;
+#logout:hover{
+  background-color: #d3d3d3;
+  border: 2px solid #1f2833;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*============= End of Header ==========*/
