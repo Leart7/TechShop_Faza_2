@@ -74,6 +74,7 @@ fieldset{
   margin-left: auto;
   margin-right: auto;
   padding:15px 10px 0px 10px;
+  
 }
 
 fieldset{
@@ -98,5 +99,31 @@ fieldset{
   background-color: #3f4d5e;
   color: white;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  /* .container2{
+    flex-direction: column;
+  }
+
+  .product-container2{
+    width: 100%;
+  } */
+
+  .container2{
+    width: 100%;
+    margin: 200px auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container2{
+    flex-direction: column;
+  }
+
+  .product-container2,.form-container{
+    width: 70%;
+    margin-bottom: 20px;
+  }
 }
 
