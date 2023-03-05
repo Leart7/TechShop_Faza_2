@@ -93,6 +93,10 @@ margin-right: -50px;
 
 /*============== Navbar ============*/
 
+.navspanhide{
+  display: none;
+}
+
 .container{
   width: 50%;
   background-color: #c2cad0;
@@ -162,7 +166,8 @@ a:hover{
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20vh;
-
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
  }
  
  .row,
@@ -201,7 +206,7 @@ a:hover{
  
  .product-container,
  .product-container4{
-   width: 25%;
+   /* width: 25%; */
    outline: 1px solid rgb(197, 197, 197);
    height: 36.25730994152047vh;
    
@@ -216,14 +221,14 @@ a:hover{
  }
 
  .imagecontainer{
-  height: 150px;
+  height:  15.479876160990711vh;
   
 }
  
  #first-product{
-  max-width: 213px;
-   max-height: 130px;
-   padding-top: 18px;
+  max-width: 85%;
+   max-height: 14vh;
+   padding-top: 2.5%;
    display: block;
   margin-left: auto;
   margin-right: auto;
@@ -231,7 +236,7 @@ a:hover{
    
  }
  
- #second-product{
+ /* #second-product{
    width: 130px;
    height: 130px;
    padding: 18px 80px;
@@ -261,14 +266,16 @@ a:hover{
    padding: 18px 70px;
    cursor: pointer;
   
- }
+ } */
  
  .product-text{
-   padding-top: 20px;
-   padding-left: 5px;
-   padding-right: 5px;
-   margin-top: 15px;
-   height: 40px;
+  padding-top: 2.5%;
+  padding-left: 0.69%;
+  padding-right: 0.69%;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 0.8vw;
+  height: 3.8vh;
  }
  
  .product-text:hover{
@@ -277,10 +284,10 @@ a:hover{
  }
  
  .price{
-   font-size: 20px;
-   padding-left: 5px;
-   font-weight: bold;
-   margin-top:20px;
+  font-size: 1.2vw;
+  padding-left: 0.69%;
+  font-weight: bold;
+  margin-top:15%;
  }
  
  .price:hover{
@@ -543,5 +550,204 @@ td a {
 }
 
 
+
+@media only screen and (max-width: 580px) {
+  .left-section{
+    width: 120px;
+  }
+
+  .right-section {
+    width: 120px;
+  }
+
+  .middle-section{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .right-section{
+    width: 140px;
+  }
+
+  .left-section{
+    width: 140px;
+  }
+
+  .middle-section{
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+}
+
+@media only screen and (max-width: 837px){
+
+  .right-footer{
+    min-width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  
+}
+
+@media only screen and (max-width: 600px){
+
+  .right-footer{
+    min-width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  .middle-footer2{
+    
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .middle-footer{
+   
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .middle-footer3{
+    
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+
+  .sidebar{
+    height: 280px;
+  }
+
+  .container{
+    width: 80%;
+  }
+
+  #categories-link{
+    display: inline-flex;
+  }
+
+  .container-form{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1785px){
+  .buy-button{
+    width: 80px;
+    height: 28px;
+  }
+
+  .addtocart,.heart{
+    width: 22px;
+   }
+
+  .cart-button,
+ .favorite-button{
+  height: 28px;
+ }
+
+}
+
+@media only screen and (max-width: 1570px){
+  
+  .buy-button{
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1245px){
+  
+  .buy-button{
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-height: 870px){
+  
+  .buy-button,.cart-button,
+  .favorite-button{
+    height: 28px;
+  }
+
+  .addtocart,.heart{
+    width: 22px;
+   }
+}
+
+
+ @media only screen and (max-width: 1400px){
+  .test{
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .product-text{
+    font-size: 14px;
+  }
+
+  .price{
+    font-size: 16px;
+  }
+ }
+
+ @media only screen and (max-width: 1000px){
+  .test{
+    grid-template-columns: 50% 50%;
+    width: 65%;
+  }
+
+  .product-text{
+    font-size: 16px;
+  }
+
+  .price{
+    font-size: 18px;
+  }
+ }
+
+ @media only screen and (max-width: 600px){
+  .test{
+    grid-template-columns: 100%;
+    width: 65%;
+  }
+
+  .product-text{
+    font-size: 16px;
+  }
+
+  .price{
+    font-size: 18px;
+  }
+    
+ }
+
+ @media only screen and (max-width : 756px){
+  .container{
+    width: 100%;
+  }
+ }
+
+ @media only screen and (max-width : 615px){
+  .navspanshow{
+    display: none;
+  }
+
+  .navspanhide{
+    display: block;
+  }
+ }
 
 

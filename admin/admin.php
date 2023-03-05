@@ -9,8 +9,8 @@
   <div class="navbar-div">
     
       <div class="link-div"><a href="#">Electronics</a></div>
-      <div class="link-div"><a href="#">IT Shop</a></div>
-      <div class="link-div"><a href="#">Smart Home</a></div>
+      <div class="link-div"><a href="#"><span class="navspanshow">IT Shop</span><span class="navspanhide">IT.S</span></a></div>
+      <div class="link-div"><a href="#"><span class="navspanshow">Smart Home</span><span class="navspanhide">S.H</span></a></div>
       <div class="link-div"><a href="#">Lifestyle</a></div>
       <div class="link-div"><a href="#">Accessories</a></div>
       <div class="link-div"><a href="#">Offers</a></div>
@@ -23,7 +23,7 @@
 
 
 <main class="test">
-<div class="row">
+
 
 
   <!--First Row-->
@@ -52,32 +52,32 @@
   echo "</div>";
   echo "</div>";
   $i++;
-  if($i<=$numriProdukteve && $i%4==0){
-    echo "</div>";
-    echo "<div class='row'>";
-    $j++;
-    continue;
-    }
+  // if($i<=$numriProdukteve && $i%4==0){
+  //   // echo "</div>";
+  //   echo "<div class='row'>";
+  //   $j++;
+  //   continue;
+  //   }
     
-    $pozita = $i+1;
-    $freeSpaces = $pozita - $numriProdukteve;
+  //   $pozita = $i+1;
+  //   $freeSpaces = $pozita - $numriProdukteve;
     
-    if($numriProdukteve - $i == 1){
-      $j++;
-    }else{
-      $j=$j;
-    }
+  //   if($numriProdukteve - $i == 1){
+  //     $j++;
+  //   }else{
+  //     $j=$j;
+  //   }
     
     
-    $hapsira = (($j)*4)-$numriProdukteve;
+  //   $hapsira = (($j)*4)-$numriProdukteve;
 
   } 
-  if($hapsira<=0){
-  }else{
+  // if($hapsira<=0){
+  // }else{
     echo "<div class='product-container4'>";
     echo "<a href='addproducts.php'><button class='addproduct'>ADD PRODUCT +</button></a>";
     echo "</div>";
-  }
+  // }
   ?>
 
 </main>
