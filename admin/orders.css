@@ -1,0 +1,89 @@
+#members{
+  
+ 
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+  /* empty-cells: show;  */
+  empty-cells: hide; 
+  border-spacing: 1px 2px;
+  border-collapse: separate;
+  margin-top: 100px;
+}
+#members td, #members th 
+{
+  border:1px solid #f3e3e3; 
+  padding:5px 9px 4px;
+}
+
+#members td{
+  background-color: #c2cad0;
+}
+#members th 
+{
+  text-align:left;
+  padding-top:6px;
+  padding-bottom:5px;
+  background-color:#1f2833;
+  color:#ffffff;
+}
+#members tr.alt td 
+{background-color:#adb3b3;}
+
+
+td a {
+  display:block;
+  width:100%;
+  text-decoration: none;
+  color: black;
+ 
+}
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+ 
+	
+	td:before { 
+		/* Now like a table header */
+		/* position: absolute; */
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 30%;
+    margin-right: 30px;
+		padding-right: 10px; 
+		white-space: nowrap;
+    display: flex;
+	}
+
+  td:nth-of-type(1):before { content: "Data e porosise: "; }
+	td:nth-of-type(2):before { content: "Produkti_ID: "; }
+	td:nth-of-type(3):before { content: "Emri i produktit: "; }
+	td:nth-of-type(4):before { content: "Prodhuesi: "; }
+	td:nth-of-type(5):before { content: "Cmimi: "; }
+}

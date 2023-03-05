@@ -3,7 +3,9 @@
     header("Location: ../index.php");
 }
 ?>
+<link rel="stylesheet" href="orders.css">
 <table id="members">
+  <thead>
     <tr>
       <th>Data e porosise</th>
       <th>Produkti_ID</th>
@@ -11,6 +13,7 @@
       <th>Prodhuesi</th>
       <th>Cmimi</th>
     </tr>
+</thead>
     <?php 
    
     if (isset($_GET['em'])){
