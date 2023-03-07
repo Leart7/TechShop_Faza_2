@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="index.css"> 
 
   <div class="middle-footer">
-    <h3 id="contact">Contact: </h3>
+    <h3 id="contact"><a href="help_contact.php" id="contactlink">Contact:</a> </h3>
     <ul id="footer-list">
     <li><a href="mailto:leartshabani77@gmail.com">leartshabani77@gmail.com</a></li>
     <li><a href="mailto:techshop@gmail.com">techshop@gmail.com</a></li>

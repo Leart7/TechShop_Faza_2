@@ -447,6 +447,11 @@ footer{
   
 }
 
+#contactlink{
+  
+  color: white;
+}
+
 .middle-footer{
   min-width: 25%;
   display: flex;
