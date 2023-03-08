@@ -37,7 +37,7 @@ function login($email,$passwordi){
       echo("<script>location.href = 'admin/admin.php'</script>");
     }
     }else{
-      echo "<p id='loginerror'>Nuk ka perdorues me keto shenime</p>";
+      // echo "<p id='loginerror'>Nuk ka perdorues me keto shenime</p>";
       echo("<script>location.href = '#rightfooter'</script>");
     }
   }

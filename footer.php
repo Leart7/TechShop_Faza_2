@@ -30,13 +30,25 @@
   </div>
   <?php 
 if(isset($_POST['login'])){
-  login($_POST['email1'],$_POST['password1']);
+  $perdoruesit = merrPerdoruesit();
+  while($perdoruesi = mysqli_fetch_assoc($perdoruesit)){
+    $email = $perdoruesi['email'];
+    if($_POST['email1']!=$email){
+      $emailerror = "User does not exist";
+      echo("<script>location.href = '#rightfooter'</script>");
+    }else{
+      login($_POST['email1'],$_POST['password1']);
+    }
+}
 }
 ?>
 <?php 
 if(!isset($_SESSION['perdoruesi'])){
+  
+  
   echo "<div class='right-footer' id='rightfooter'>";
   echo "<form id='login' name='login' method='post' class='box' >";
+  if(!empty($emailerror)) echo "<p id='loginerror'>User does not exist<p>";
   echo "<div class='input-control2'>";
   echo "<label>Email: </label><br>";
   echo "<input type='text' id='email1' name='email1' onkeyup='validateEmail1()'><br>";

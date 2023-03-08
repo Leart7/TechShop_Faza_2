@@ -624,6 +624,12 @@ width: 100%;
 padding: 0 5% 5% 5%;
 }
 
+#email::placeholder {
+  font-weight: bold;
+  color: red;
+}
+
+
 .input-control,.input-control2 {
 display: flex;
 flex-direction: column;
@@ -688,10 +694,9 @@ border: 1px solid #03a9f6;
 
 #loginerror{
   color: red;
-  font-size: 13px;
-  padding-left: 30px;
-  position: absolute;
-  left: 84%;
+  margin-top: -30px;
+  text-align: center;
+  
 }
 
 
