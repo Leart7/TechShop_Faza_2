@@ -24,7 +24,7 @@
   
   </div>
   <div class="middle-footer3">
-    <div><a href="#" class="footer-links">About us</a></div>
+    <div><a href="aboutus.php" class="footer-links">About us</a></div>
     <div><a href="#" class="footer-links">Terms and Agreements</a></div>
     <div><a href="#" class="footer-links">Location</a></div>
   </div>
