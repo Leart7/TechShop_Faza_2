@@ -6,12 +6,12 @@
 
 .containerslider{
   width: 100%;
-  height: 100vh;
+  
   /* background:#222; */
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 .swiper{
@@ -31,3 +31,149 @@
 .swiper .swiper-pagination-bullet-active{
   background: #fff;
 }
+
+.main-section{
+  background-image: url("images/fullscreen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.main-section h1{
+  margin-top: 90px;
+  color: white;
+  font-size: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-text{
+  width: 50%;
+  margin-top: 30vh;
+  
+  
+}
+
+.main-section h3{
+  color: white;
+  margin-top: 3vh;
+}
+
+#learnmore{
+  background-color: #0275d8;
+  padding: 15px 150px 15px 150px;
+  margin-top: 5vh;
+  border: 0;
+  border-radius: 13px;
+  font-size: 25px;
+  color: white;
+  transition: 0.2s;
+}
+
+#learnmore:hover{
+  background: rgb(11, 94, 215);
+  cursor: pointer;
+}
+
+#apple{
+  width: 150px;
+}
+
+.threecontainer{
+  width: 100%;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-columns: 36% 28% 36%;
+  margin-top: -0.41279669762641896vh;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+  
+}
+
+.threecontainerrow{
+  outline: 1px solid rgb(197, 197, 197);
+  height: 18vh;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.threecontainerrow h3{
+  display: inline-block;
+}
+
+.vertaligned{
+  height: 8.3vh;
+  
+  align-items: center;
+  display: flex;
+}
+
+.imgcontainer{
+  height: 8.3vh;
+}
+
+.imgcontainer, .textcontainer{
+  display: inline-block;
+}
+
+.textcontainer{
+  margin-left: 2vh;
+  line-height: 3vh;
+}
+
+#deliverytruck{
+  width: 100px;
+}
+
+#paymentmethod{
+  width: 80px;
+}
+
+#returnicon{
+  width: 80px;
+}
+
+
+
+
+@media only screen and (max-width: 1400px) {
+  .main-text{
+    width: 65%;
+  }
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+  .main-text{
+    width: 80%;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .threecontainer{
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main-text{
+    width: 100%;
+    margin-top: 20vh;
+    
+  }
+}
+
+
+
+
+
+
