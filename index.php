@@ -13,7 +13,7 @@
     <div class="link-div"><a href="#">Lifestyle</a></div>
     <div class="link-div"><a href="#">Accessories</a></div>
     <div class="link-div"><a href="#">Offers</a></div>
-    <div class="link-div"><a href="#">New </a></div>
+    <div class="link-div"><a href="aboutus.php">New </a></div>
     
  
 </div>

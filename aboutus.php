@@ -101,4 +101,48 @@
     </div>
   </div>
 
+  <div class="ads">
+  <div id="firstnewsproduct">
+    <div id="fimgcontainer">
+      <img src="images/headphones_final.png" id="headphones">
+    </div>
+    <div id="ftxtcontainer">
+      <h2>Headphones</h2>
+      <button class="newsbutton">Explore</button>
+    </div>
+  </div>
 
+  <div id="secondnewsproduct">
+  <div id="simgcontainer">
+      <img src="images/tv.png" id="tv">
+    </div>
+    <div id="stxtcontainer">
+      <h2>OLED 8K TV</h2>
+      <button class="newsbutton">Explore</button>
+    </div>
+  </div>
+
+  <div id="thirdnewsproduct">
+  <div id="timgcontainer">
+      <img src="images/gamingchair.png" id="gamingchair">
+    </div>
+    <div id="ttxtcontainer">
+      <h2>Gaming Chairs</h2>
+      <button class="newsbutton">Explore</button>
+    </div>
+  </div>
+
+  <div id="fourthnewsproduct">
+  <div id="fotxtcontainer">
+      <h2>Apple Products</h2>
+      <button class="newsbutton">Explore</button>
+    </div>
+  <div id="foimgcontainer">
+      <img src="images/appleproducts.png" id="appleproducts">
+    </div>
+    
+  </div>
+  </div>
+
+  <?php include "footer.php" ?>
+ 
