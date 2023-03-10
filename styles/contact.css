@@ -1,0 +1,111 @@
+.contact-container{
+  background-color: rgb(137, 215, 227);
+  width: 50%;
+  height: 65vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25vh;
+  text-align: center;
+
+}
+
+.contact-container h1{
+  padding-top: 170px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: rgb(2, 34, 109);
+  font-size: 40px;
+}
+
+.grid-contact{
+  display: grid;
+  width: 58%;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 30px;
+  position: absolute;
+  top: 100px;
+  left: 20%;
+  right: auto;
+}
+
+.threeboxes{
+  background-color: rgb(254, 254, 254);
+  height: 20.63983488132095vh;
+  text-align: center;
+}
+
+
+/* input[type="email"] */
+#contact-form input[type="text"], #contact-form input[type="email"]{
+  width: 50%;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 30px;
+  
+}
+
+textarea{
+  resize: none;
+  width: 51%;
+  height: 10vh;
+  margin-bottom: 30px;
+}
+
+#contact-form input[type="submit"]{
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 10px 45px 10px 45px;
+  background-color: rgb(231, 231, 223);
+
+
+
+}
+
+#contact-form input[type="submit"]:hover{
+  background-color: #3f4d5e;
+  color: white;
+  cursor: pointer;
+}
+
+.iconcontainer{
+  
+  height: 8vh;
+}
+
+.iconcontainer img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#secondicon, #thirdicon{
+  width: 80px;
+}
+
+#firsticon, #secondicon, #thirdicon{
+  max-width: 90px;
+  max-height: 8vh;
+}
+
+@media only screen and (max-width: 1200px){
+  .contact-container{
+    width: 70%;
+  }
+
+  .grid-contact{
+    left: 18.5%;
+  }
+}
+
+@media only screen and (max-width: 1050px){
+  .grid-contact{
+    position: relative;
+    grid-template-columns: 100% ;
+    grid-row-gap: 30px;
+  }
+
+  .contact-container{
+    margin-top: 0;
+    width: 90%;
+  }
+}

@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 <?php include 'sidebar.php' ?>
 
-<link rel="stylesheet" href="cartproducts.css">
+<link rel="stylesheet" href="styles/cartproducts.css">
 <div class="cartfavoriteordercontainer">
     <table class="product-table">
     <?php 

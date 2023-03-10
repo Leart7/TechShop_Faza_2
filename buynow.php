@@ -1,5 +1,5 @@
 <?php include 'header.php' ?>
-<link rel="stylesheet" href="buynow.css">
+<link rel="stylesheet" href="styles/buynow.css">
 <?php
 if(!isset($_SESSION['perdoruesi'])){
   header("Location: index.php#rightfooter");

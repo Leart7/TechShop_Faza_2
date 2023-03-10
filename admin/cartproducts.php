@@ -3,7 +3,7 @@
     header("Location: ../index.php");
 }
 ?>
-<link rel="stylesheet" href="cartproducts.css">
+<link rel="stylesheet" href="styles/cartproductsadmin.css">
 <div class="cartfavoriteordercontainer">
     <table class="product-table">
     <?php 

@@ -126,5 +126,5 @@ if(isset($_POST['register'])){
     </form>
    
  </div>
- <!-- <script defer src="signup.js"></script> -->
+ <!-- <script defer src="javascript/signup.js"></script> -->
  <?php include 'footer.php'?>

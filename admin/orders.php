@@ -3,7 +3,7 @@
     header("Location: ../index.php");
 }
 ?>
-<link rel="stylesheet" href="orders.css">
+<link rel="stylesheet" href="styles/orders.css">
 <table id="members">
   <thead>
     <tr>

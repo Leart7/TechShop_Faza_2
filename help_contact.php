@@ -1,6 +1,6 @@
 <?php include 'header.php'?>
 
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="styles/contact.css">
 
 
   <div class="grid-contact">

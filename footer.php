@@ -1,7 +1,7 @@
 <footer>
 
 
-<link rel="stylesheet" href="index.css"> 
+<link rel="stylesheet" href="styles/index.css"> 
 
   <div class="middle-footer">
     <h3 id="contact"><a href="help_contact.php" id="contactlink">Contact:</a> </h3>
@@ -70,8 +70,8 @@ if(!isset($_SESSION['perdoruesi'])){
   </div>
 </footer>
 <!--============ End of Footer ======-->
-<script defer src="login.js"></script> 
-<script src="index.js"></script>
+<script defer src="javascript/login.js"></script> 
+<script src="javascript/index.js"></script>
 
   </body>
 </html>

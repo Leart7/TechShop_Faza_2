@@ -1,0 +1,150 @@
+.imagecontainer{
+  width: 30%;
+  height:  15.479876160990711vh;
+  
+}
+
+
+#first-product2{
+  max-height: 13.415892672858616vh;
+  min-height: 10vh;
+  padding: 18px 0px;
+  display: inline-block;
+  
+}
+
+.productandtext{
+  width: 30%;
+
+}
+
+.product-text2{
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 15px;
+  height: 40px;
+}
+
+
+
+.price2{
+  font-size: 20px;
+  padding-left: 5px;
+  font-weight: bold;
+  margin-top:20px;
+}
+
+.cartfavoriteordercontainer{
+  width: 50%;
+  margin: 200px auto;
+}
+
+.product-table{
+  width: 100%;
+}
+
+tr{
+  width: 100%;
+  
+}
+
+td{
+  border: 1px solid #3f4d5e;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  padding:5px 9px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+td:hover{
+  outline: none;
+   background-color: rgb(226, 226, 226);
+   cursor: pointer;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+#buy,#fav{
+  margin-bottom: 8px;
+}
+
+#buy,#remove,#fav{
+  padding: 7px;
+  width: 100%;
+}
+#buy:hover,#remove:hover,#fav:hover{
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3f4d5e;
+  color: white;
+  cursor: pointer;
+  border: 2px solid black;
+  
+ }
+
+ #emptycart,
+ #emptyfavorites{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.6;
+ }
+
+ #emptyfavorites{
+  width: 50%;
+ }
+
+
+
+
+
+ @media only screen and (max-width: 1300px) {
+  .cartfavoriteordercontainer{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #emptyfavorites{
+    width: 80%;
+  }
+  .cartfavoriteordercontainer{
+    width: 85%;
+  }
+ }
+
+
+@media only screen and (max-width: 770px) {
+  td{
+    flex-direction: column;
+  }
+
+  .imagecontainer{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #first-product2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .productandtext{
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-table{
+   margin-left: 5%;
+  }
+}
+
+
+
+
+
+
