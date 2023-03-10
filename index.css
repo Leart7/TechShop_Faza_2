@@ -679,15 +679,17 @@ border: 1px solid #03a9f6;
   font-size: 12px;
 }
 
+.registercontainer{
+  width: 100%;
+  margin-left: -5%;
+}
+
 .register{
-  
   padding: 13px 30px 13px 30px;
   margin-top: 15px;
   display: block;
   margin-right: auto;
   margin-left: auto;
-
-  
 }
 
 

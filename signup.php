@@ -119,7 +119,10 @@ if(isset($_POST['register'])){
       <input type="text" name="adresa" id="adresa"  value="<?php if(!empty($_POST['adresa'])) echo $_POST['adresa'] ?>" onkeyup="validateAddress()">
       <div class="error"><?php if(!empty($adresserror)) echo $adresserror ?></div>
       </div>
+      <div class="registercontainer">
       <button class="register" id="register" name="register" onclick="return validateInputs()">CREATE ACCOUNT</button>
+      </div>
+      
     </form>
    
  </div>
