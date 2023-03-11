@@ -52,6 +52,14 @@ function merrPerdoruesit(){
   return mysqli_query($dbconn, $sql);
 }
 
+function merrTeGjithePerdoruesit(){
+  global $dbconn;
+  $sql = "SELECT p.email, p.emri, p.mbiemri, p.datalindjes, p.telefoni,p.adresa, COUNT(po.email) AS numri_porosive";
+  $sql .=" FROM perdoruesi p left join porosia po on p.email = po.email ";
+  $sql .=" GROUP BY p.email, p.emri, p.mbiemri, p.datalindjes, p.telefoni";
+  return mysqli_query($dbconn, $sql);
+}
+
 function merrEmail($email){
   global $dbconn;
   $sql = "SELECT email, emri, mbiemri, datalindjes, telefoni,adresa,roli,passwordi FROM perdoruesi";

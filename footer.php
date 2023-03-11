@@ -30,7 +30,7 @@
   </div>
   <?php 
 if(isset($_POST['login'])){
-  $perdoruesit = merrPerdoruesit();
+  $perdoruesit = merrTeGjithePerdoruesit();
   while($perdoruesi = mysqli_fetch_assoc($perdoruesit)){
     $email = $perdoruesi['email'];
     if($_POST['email1']!=$email){
