@@ -3,7 +3,7 @@
     header("Location: ../index.php");
 }
 ?>
-<link rel='stylesheet' href='styles/modifikoproduktet.css'>
+<link rel='stylesheet' href='../styles/modifikoproduktet.css'>
 <div class="container2">
 <?php 
     if (isset($_GET['pid'])){
