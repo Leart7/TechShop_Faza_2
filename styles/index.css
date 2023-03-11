@@ -624,12 +624,6 @@ width: 100%;
 padding: 0 5% 5% 5%;
 }
 
-#email::placeholder {
-  font-weight: bold;
-  color: red;
-}
-
-
 .input-control,.input-control2 {
 display: flex;
 flex-direction: column;

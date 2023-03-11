@@ -27,6 +27,10 @@ document.getElementById("fav-link").onclick = function(){
   location.href = "favoriteproducts.php";
 }
 
+document.getElementById("aboutuslink").onclick = function(){
+  location.href = "aboutus.php";
+}
+
 document.getElementById("home-link").onclick = function(){
   location.href = "index.php";
 }

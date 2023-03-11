@@ -104,6 +104,14 @@ textarea{
     grid-row-gap: 30px;
   }
 
+  #contact-form input[type="text"], #contact-form input[type="email"]{
+    width: 80%;
+  }
+
+  textarea{
+    width: 81%;
+  }
+
   .contact-container{
     margin-top: 0;
     width: 90%;
