@@ -29,15 +29,22 @@
     <div><a href="#" class="footer-links">Location</a></div>
   </div>
   <?php 
+
+  class login extends functions{
+    public $sql;
+    public $row;
+  }
+  $login = new login();
+
 if(isset($_POST['login'])){
-  $perdoruesit = merrTeGjithePerdoruesit();
-  while($perdoruesi = mysqli_fetch_assoc($perdoruesit)){
+  $perdoruesit = $login->merrTeGjithePerdoruesitoop();
+  while($perdoruesi = $login->row = $perdoruesit->fetch_assoc()){
     $email = $perdoruesi['email'];
     if($_POST['email1']!=$email){
       $emailerror = "User does not exist";
       echo("<script>location.href = '#rightfooter'</script>");
     }else{
-      login($_POST['email1'],$_POST['password1']);
+      $login->loginoop($_POST['email1'],$_POST['password1']);
     }
 }
 }

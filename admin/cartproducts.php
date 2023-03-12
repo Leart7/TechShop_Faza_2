@@ -7,13 +7,20 @@
 <div class="cartfavoriteordercontainer">
     <table class="product-table">
     <?php 
+
+    class cartProductsAdmin extends functions{
+      public $sql;
+      public $row;
+    }
+    $cpa = new cartProductsAdmin();
+    
     if (isset($_GET['em'])){
       $email = $_GET['em'];
-      $perdoruesiData = merrEmail($email);
-      $carts = merrCartAdmin($email);
+      $perdoruesiData = $cpa->merrEmailoop($email);
+      $carts = $cpa->merrCartAdminoop($email);
     }
   $i=0;
-  while($cart = mysqli_fetch_assoc($carts)){
+  while($cart = $cpa->row = $carts->fetch_assoc()){
     $produktiid = $cart['produkti_id'];
     $emri = $cart['emri'];
     $cmimi = $cart['cmimi'];

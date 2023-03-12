@@ -2,10 +2,16 @@
 <div class="container-form">
 <?php 
 
+class signup extends functions{
+  public $sql;
+  public $row;
+}
+$signup = new signup();
+
 
 if(isset($_POST['register'])){
-  $perdoruesit = merrPerdoruesit();
-  while($perdoruesi = mysqli_fetch_assoc($perdoruesit)){
+  $perdoruesit = $signup->merrPerdoruesitoop();
+  while($perdoruesi =  $signup->row = $perdoruesit->fetch_assoc()){
     $email = $perdoruesi['email'];
     if($_POST['email']==$email){
       $emailerror = "User already exists";

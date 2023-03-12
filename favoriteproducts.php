@@ -5,6 +5,13 @@
 <div class="cartfavoriteordercontainer">
     <table class="product-table">
 <?php 
+
+class favoriteProducts extends functions{
+  public $sql;
+  public $row;
+}
+$fp = new favoriteProducts();
+
     if(!isset($_SESSION['perdoruesi'])){
       echo("<script>location.href = 'index.php#rightfooter'</script>");
     }
@@ -13,13 +20,15 @@
   }
 
   //echo("<script>location.href = '".ADMIN_URL."/index.php?msg=$msg';</script>");
-  $favorites = merrFavorites();
-  $numriFavorites = numberofFavorites($perdoruesi);
+  $favorites = $fp->merrFavoritesoop();
+  
+  $numriFavorites = $fp->numberofFavoritesoop($perdoruesi);
+
   if($numriFavorites == 0){
     echo "<img src='images/emptyfavorites.png' id='emptyfavorites'>";
   }
   $i=0;
-  while($favorite = mysqli_fetch_assoc($favorites)){
+  while($favorite =   $fp->row = $favorites->fetch_assoc()){
     $produktiid = $favorite['produkti_id'];
     $emri = $favorite['emri'];
     $cmimi = $favorite['cmimi'];
@@ -45,10 +54,10 @@
     echo "</tr>";
 
     if(isset($_POST['remove'.$produktiid])){
-      deleteFavorites($perdoruesi, $produktiid);
+      $fp->deleteFavoritesoop($perdoruesi,$produktiid);
     }
     if(isset($_POST['cart'.$produktiid])){
-      shtoCart($perdoruesi, $produktiid);
+      $fp->shtoCartoop($perdoruesi, $produktiid);
     }
   }
 ?>

@@ -46,11 +46,17 @@
     <div id="favorite-container">
       <div class="icon-div"><img src="images/favorite_icon.png" class="icons" title="Favorites"></a></div>
       <?php 
+
+      class sidebar extends functions{
+        public $sql;
+        public $row;
+      }
+      $sidebar = new sidebar();
       
       if(isset($_SESSION['perdoruesi'])){
         $perdoruesi = $_SESSION['perdoruesi']['email'];
-        merrFavorites();
-        $numriFavorites = numberofFavorites($perdoruesi);
+        $sidebar->merrFavoritesoop();
+        $numriFavorites = $sidebar->numberofFavoritesoop($perdoruesi);
         if($numriFavorites > 0){
           echo "<div id='favorite-counter'>$numriFavorites</div>";
         }

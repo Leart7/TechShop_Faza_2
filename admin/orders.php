@@ -15,20 +15,27 @@
     </tr>
 </thead>
     <?php 
-   
+
+    class orders extends functions{
+      public $sql;
+      public $row;
+    }
+    $order = new orders();
+    $orders = $order->merrPorositeoop($email);
     if (isset($_GET['em'])){
       $email = $_GET['em'];
-      $perdoruesiData = merrEmail($email);
-      $porosite = merrPorosite($email);
+      $perdoruesiData = $order->merrEmailoop($email);
+      $porosite =$order->merrPorositeoop($email);
     }
     $i=0;
-    while($porosia =  mysqli_fetch_assoc($porosite)){
+    while($porosia =  $order->row = $porosite->fetch_assoc()){
+      $dataEPorosise = $order->row['dataeporosise'];
       if($i%2==0){
         echo "<tr>";
       }else{
         echo "<tr class='alt'>";
       }
-      echo "<td>" . $porosia['dataeporosise'] . "</td>";
+      echo "<td>" . $dataEPorosise . "</td>";
       echo "<td>" . $porosia['produkti_id'] . "</td>";
       echo "<td>" . $porosia['emri'] . "</td>";
       echo "<td>" . $porosia['prodhuesi'] . "</td>";

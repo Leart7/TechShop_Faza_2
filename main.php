@@ -1,16 +1,25 @@
+
 <main class="test">
 
 
 
 <?php
 
+class main extends functions{
+  public $sql;
+  public $row;
+}
+$main = new main();
+
   if(isset($_SESSION['perdoruesi'])){
     $perdoruesi = $_SESSION['perdoruesi']['email'];
+    $roli = $_SESSION['perdoruesi']['roli'];
   }
-  $produktet = merrProduktet();
+  $produktet = $main->merrProduktetoop();
+  
   $i=0;
   $j=0;
-  while($produkti = mysqli_fetch_assoc($produktet)){
+  while($produkti = $main->row = $produktet->fetch_assoc()){
     $produktiid = $produkti['produkti_id'];
     $emri = $produkti['emri'];
     $cmimi = $produkti['cmimi'];
@@ -38,10 +47,10 @@
     echo("<script>location.href = 'index.php#rightfooter'</script>");
   }else{
     if(isset($_POST['cart'.$produktiid])){
-      shtoCart($perdoruesi,$produktiid);
+      $main->shtoCartoop($perdoruesi,$produktiid);
     }
     if(isset($_POST['fav'.$produktiid])){
-        shtoFavorites($perdoruesi,$produktiid);
+      $main->shtoFavoritesoop($perdoruesi,$produktiid);
       } 
   }
   echo "</div>";

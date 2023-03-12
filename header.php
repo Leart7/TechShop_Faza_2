@@ -1,4 +1,5 @@
-<?php include 'admin/functions.php'?>
+<?php include 'admin/connection.php' ?>
+<?php include 'admin/oop_functions.php' ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,11 +28,17 @@
       
           <a href="cartproducts.php"><img src="images/shopping-cart-svg-png-icon-download-28_white.png" id="cart" alt="Cart" title="Cart" ></a>
           <?php 
+
+          class header extends functions{
+            public $sql;
+            public $row;
+          }
+          $header = new header();
       
       if(isset($_SESSION['perdoruesi'])){
         $perdoruesi = $_SESSION['perdoruesi']['email'];
-        merrCart();
-        $numriCart = numberofCarts($perdoruesi);
+        $header->merrCartoop();
+        $numriCart = $header->numberofCartsoop($perdoruesi);
         if($numriCart > 0){
           echo "<div id='cart-count'>$numriCart</div>";
         }

@@ -7,11 +7,20 @@
 <div class="container2">
 
     <?php 
+
+    class modifikoProduktet extends functions{
+      public $sql;
+      public $row;
+      public $categories;
+    }
+    $mp = new modifikoProduktet();
+
     if (isset($_GET['pid'])){
       $produktiid = $_GET['pid'];
-      $produktiData = merrProduktin($produktiid);
+      $produktiData = $mp->merrProduktinoop($produktiid);
+      $vargu = $mp->row = $produktiData->fetch_assoc();
       if($produktiData){
-        $produkti = mysqli_fetch_assoc($produktiData);
+        $produkti = $vargu;
         $produktiid = $produkti['produkti_id'];
         $emri = $produkti['emri'];
         $prodhuesi = $produkti['prodhuesi'];
@@ -30,8 +39,8 @@
       $cmimi = $_POST['cmimiproduktit'];
       $pershkrimi = $_POST['pershkrimiproduktit'];
       $kategoriaid = $_POST['kategoria'];
-      editCategory($produktiid,$kategoriaid);
-      editProducts($produktiid, $emri, $cmimi, $vitiprodhimit, $pershkrimi, $prodhuesi);
+      $mp->editCategoryoop($produktiid,$kategoriaid);
+      $mp->editProductsoop($produktiid, $emri, $cmimi, $vitiprodhimit, $pershkrimi, $prodhuesi);
       
       
 
@@ -117,8 +126,8 @@ if(isset($_POST['submit']) && isset($_FILES['my_image'])){
         <select name="kategoria" id="kategoria" style="width:100%;border: 1px solid #1f2833;height: 40px;" >
           <option value="<?php echo"$kategoriaid"; ?>"><?php if(!empty($kategoria)) echo $kategoria ?></option>
           <?php 
-          $kategoriaData = merrKategorite($kategoriaid);
-          while($kategoriaa = mysqli_fetch_assoc($kategoriaData)){
+          $kategoriaData = $mp->merrKategoriteoop($kategoriaid);
+          while($kategoriaa = $mp->categories = $kategoriaData->fetch_assoc()){
             $kategoriaId = $kategoriaa['kategoria_id'];
             $kategoriaemri = $kategoriaa['emri_kategorise'];
             echo "<option value='$kategoriaId'>$kategoriaemri</option>";

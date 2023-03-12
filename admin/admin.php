@@ -28,15 +28,21 @@
 
   <!--First Row-->
   <?php
-  $produktet = merrProduktet();
+
+  class admin extends functions{
+    public $sql;
+    public $row;
+  }
+  $admin = new admin();
+  $produktet = $admin->merrProduktetoop();
+  
   $i=0;
   $j=1;
-  while($produkti = mysqli_fetch_assoc($produktet)){
+  while($produkti = $admin->row = $produktet->fetch_assoc()){
     $produktiid = $produkti['produkti_id'];
     $emri = $produkti['emri'];
     $cmimi = $produkti['cmimi'];
     $foto = $produkti['image_url'];
-    $numriProdukteve = numberofProducts();
     
     
     
@@ -52,32 +58,12 @@
   echo "</div>";
   echo "</div>";
   $i++;
-  // if($i<=$numriProdukteve && $i%4==0){
-  //   // echo "</div>";
-  //   echo "<div class='row'>";
-  //   $j++;
-  //   continue;
-  //   }
-    
-  //   $pozita = $i+1;
-  //   $freeSpaces = $pozita - $numriProdukteve;
-    
-  //   if($numriProdukteve - $i == 1){
-  //     $j++;
-  //   }else{
-  //     $j=$j;
-  //   }
-    
-    
-  //   $hapsira = (($j)*4)-$numriProdukteve;
+
 
   } 
-  // if($hapsira<=0){
-  // }else{
     echo "<div class='product-container4'>";
     echo "<a href='addproducts.php'><button class='addproduct'>ADD PRODUCT +</button></a>";
     echo "</div>";
-  // }
   ?>
 
 </main>

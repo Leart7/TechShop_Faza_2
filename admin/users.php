@@ -2,10 +2,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<?php if(!isset($_SESSION['perdoruesi']) || $_SESSION['perdoruesi']['roli']==0){
-    header("Location: ../index.php");
-}
-?>
+
 <link rel="stylesheet" href="../styles/users.css">
 <table id="members">
   <thead>
@@ -21,22 +18,35 @@
 </thead>
     
     <?php  
+
+    class users extends functions{
+      public $sql;
+      public $row;
+    }
+
+    $user = new users();
+    $users = $user->merrPerdoruesitoop();
    
-    $perdoruesit = merrPerdoruesit();
     $i=0;
-    while($perdoruesi = mysqli_fetch_assoc($perdoruesit)){
+    while($perdoruesi = $user->row = $users->fetch_assoc()){
+      $email = $user->row['email'];
+      $emri = $user->row['emri'];
+      $mbiemri = $user->row['mbiemri'];
+      $adresa = $user->row['adresa'];
+      $telefoni = $user->row['telefoni'];
+      $numriPorosive = $user->row['numri_porosive'];
       if($i%2==0){
         echo "<tr>";
       }else{
         echo "<tr class='alt'>";
       }
       $email = $perdoruesi['email'];
-      echo "<td>" . $perdoruesi['email'] . "</td>";
-      echo "<td>" . $perdoruesi['emri'] . "</td>";
-      echo "<td>" . $perdoruesi['mbiemri'] . "</td>";
-      echo "<td>" . $perdoruesi['adresa'] . "</td>";
-      echo "<td>" . $perdoruesi['telefoni'] . "</td>";
-      echo "<td>" . $perdoruesi['numri_porosive'] . "</td>";
+      echo "<td>" . $email . "</td>";
+      echo "<td>" . $emri . "</td>";
+      echo "<td>" . $mbiemri . "</td>";
+      echo "<td>" . $adresa . "</td>";
+      echo "<td>" . $telefoni . "</td>";
+      echo "<td>" . $numriPorosive . "</td>";
       echo "<td class='editicon' style='width:20px'><a href='editoperdoruesit.php?em=$email'><i class='far fa-edit' style='font-size:115%' ></i></a></td>";
       echo "</tr>";
       $i++;
@@ -45,5 +55,3 @@
    
     ?>
   </table>
-
-  

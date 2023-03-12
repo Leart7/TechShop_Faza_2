@@ -5,10 +5,19 @@ if(!isset($_SESSION['perdoruesi'])){
   header("Location: index.php#rightfooter");
 }
 if (isset($_GET['pid'])){
+
+  class buy extends functions{
+    public $sql;
+    public $row;
+  }
+  $buy = new buy();
+
   $produktiid = $_GET['pid'];
-  $produktiData = merrProduktin($produktiid);
+  
+  $produktiData = $buy->merrProduktinoop($produktiid);
+  $vargu = $buy->row = $produktiData->fetch_assoc();
   if($produktiData){
-    $produkti = mysqli_fetch_assoc($produktiData);
+    $produkti = $vargu;
     $produktiid = $produkti['produkti_id'];
     $emri = $produkti['emri'];
     $cmimi = $produkti['cmimi'];
@@ -22,7 +31,7 @@ if (isset($_GET['pid'])){
 // test comment
   if(isset($_POST['porosit'])){
     $perdoruesi = $_SESSION['perdoruesi']['email'];
-    buyProducts($perdoruesi,$_GET['pid'],date('Y-m-d H:i:s'),$cmimi);
+    $buy->buyProductsoop($perdoruesi,$_GET['pid'],date('Y-m-d H:i:s'),$cmimi);
   }
  
 

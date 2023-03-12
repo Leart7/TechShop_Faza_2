@@ -6,11 +6,20 @@
 <link rel='stylesheet' href='../styles/modifikoproduktet.css'>
 <div class="container2">
 <?php 
+
+class deleteProducts extends functions{
+  public $sql;
+  public $row;
+}
+
+$dp = new deleteProducts();
+
     if (isset($_GET['pid'])){
       $produktiid = $_GET['pid'];
-      $produktiData = merrProduktin($produktiid);
+      $produktiData = $dp->merrProduktinoop($produktiid);
+      $vargu = $dp->row = $produktiData->fetch_assoc();
       if($produktiData){
-        $produkti = mysqli_fetch_assoc($produktiData);
+        $produkti = $vargu;
         $produktiid = $produkti['produkti_id'];
         $emri = $produkti['emri'];
         $prodhuesi = $produkti['prodhuesi'];
@@ -23,8 +32,8 @@
     }
 
     if(isset($_POST['fshij'])){
-      deleteImage($_POST['produkti_id']);
-      deleteProducts($_POST['produkti_id']);
+      $dp->deleteImageoop($_POST['produkti_id']);
+      $dp->deleteProductsoop($_POST['produkti_id']);
 }
     ?>
 

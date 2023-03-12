@@ -12,14 +12,20 @@
     $perdoruesi = $_SESSION['perdoruesi']['email'];
   }
         //second change comment
-       
-  $carts = merrCart();
-  $numriCart = numberofCarts($perdoruesi);
+    class cartProducts extends functions{
+    public $sql;
+    public $row;
+    }
+    $cp = new cartProducts();
+    
+  $carts = $cp->merrCartoop();
+  $numriCart =  $cp->numberofCartsoop($perdoruesi);
+  
   if($numriCart == 0){
     echo "<img src='images/empty-cart.png' id='emptycart'> ";
   }
   $i=0;
-  while($cart = mysqli_fetch_assoc($carts)){
+  while($cart = $cp->row = $carts->fetch_assoc()){
     $produktiid = $cart['produkti_id'];
     $emri = $cart['emri'];
     $cmimi = $cart['cmimi'];
@@ -44,7 +50,7 @@
     echo "</tr>";
 
     if(isset($_POST['remove'.$produktiid])){
-      deleteCart($perdoruesi, $produktiid);
+      $cp->deleteCartoop($perdoruesi, $produktiid);
     }
   }
   ?>

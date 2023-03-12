@@ -1,25 +1,34 @@
 <?php include 'adminheader.php' ?>
-<?php if(!isset($_SESSION['perdoruesi']) || $_SESSION['perdoruesi']['roli']==0){
-    header("Location: ../index.php");
-}
+
 ?>
 
 <?php 
+
+class editPerdorues extends functions{
+  public $sql;
+  public $row;
+}
+$ep = new editPerdorues();
+
 if (isset($_GET['em'])){
   $email = $_GET['em'];
-  $perdoruesiData = merrEmail($email);
+  $perdoruesiData = $ep->merrEmailoop($email);
+  $vargu = $ep->row = $perdoruesiData->fetch_assoc();
+  
   if($perdoruesiData){
-    $perdoruesi = mysqli_fetch_assoc($perdoruesiData);
+    $perdoruesi = $vargu;
     $email = $perdoruesi['email'];
     $emri = $perdoruesi['emri'];
     $mbiemri = $perdoruesi['mbiemri'];
     $dataLindjes = $perdoruesi['datalindjes'];
     $telefoni = $perdoruesi['telefoni'];
     $adresa = $perdoruesi['adresa'];
+
+
   }
 }
 if(isset($_POST['deleteuser'])){
-      deleteUsers($_POST['email']);
+      $ep->deleteUsersoop($_POST['email']);
 }
 
 if(isset($_POST['savechanges'])){
@@ -28,7 +37,7 @@ if(isset($_POST['savechanges'])){
   $mbiemri = $_POST['mbiemri'];
   $adresa = $_POST['adresa'];
   $telefoni = $_POST['numritelefonit'];
-  editUsers($email, $emri, $mbiemri, $adresa, $telefoni);
+  $ep->editUsersoop($email, $emri, $mbiemri, $adresa, $telefoni);
  
 }
 

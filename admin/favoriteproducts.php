@@ -7,10 +7,17 @@
 <div class="cartfavoriteordercontainer">
     <table class="product-table">
     <?php 
+
+    class favoriteProductsAdmin extends functions{
+      public $sql;
+      public $row;
+    }
+    $fpa = new favoriteProductsAdmin();
+
     if (isset($_GET['em'])){
       $email = $_GET['em'];
-      $perdoruesiData = merrEmail($email);
-      $carts = merrFavoritesAdmin($email);
+      $perdoruesiData = $fpa->merrEmailoop($email);
+      $carts = $fpa->merrFavoritesAdminoop($email);
     }
   $i=0;
   while($cart = mysqli_fetch_assoc($carts)){

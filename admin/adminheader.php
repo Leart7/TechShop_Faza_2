@@ -1,4 +1,6 @@
-<?php include 'functions.php' ?>
+
+<?php include 'connection.php' ?>
+<?php include 'oop_functions.php' ?>
 <?php if(!isset($_SESSION['perdoruesi']) || $_SESSION['perdoruesi']['roli']==0){
     header("Location: ../index.php");
 }

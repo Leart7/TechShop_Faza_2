@@ -5,19 +5,26 @@
 ?>
 
 <?php 
- $res =  produktiFundit();
- $result = mysqli_fetch_assoc($res);
+
+class addProduct extends functions{
+  public $sql;
+  public $row;
+}
+$addproduct = new addProduct();
+ $res =  $addproduct->produktiFunditoop();
+
+ $result =  $addproduct->row = $res->fetch_assoc();
  $resultnumber = $result['produkti_id'];
 if(isset($_POST['shtoproduktin'])){
-  shtoProdukte($_POST['emri'],$_POST['prodhuesi'],$_POST['vitiprodhimit'],$_POST['cmimi'],
+  $addproduct->shtoProdukteoop($_POST['emri'],$_POST['prodhuesi'],$_POST['vitiprodhimit'],$_POST['cmimi'],
   $_POST['pershkrimi'],$_POST['kategoria']);
  
   
 }
 ?>
 <?php 
- $res =  produktiFundit();
- $result = mysqli_fetch_assoc($res);
+ $res = $addproduct->produktiFunditoop();
+ $result = $addproduct->row = $res->fetch_assoc();
  $resultnumber = $result['produkti_id'];
 ?>
 
