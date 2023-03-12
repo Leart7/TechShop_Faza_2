@@ -9,6 +9,7 @@
 class addProduct extends functions{
   public $sql;
   public $row;
+  public $categories;
 }
 $addproduct = new addProduct();
  $res =  $addproduct->produktiFunditoop();
@@ -45,7 +46,19 @@ if(isset($_POST['shtoproduktin'])){
   <label>Details: </label>
   <input type="text" name="pershkrimi" id="pershkrimi"><br>
   <label>Category:</label>
-  <input type="text" name="kategoria" id="kategoria">
+  <select name="kategoria" id="kategoria" >
+          <option value="<?php echo"$kategoriaid"; ?>"><?php if(!empty($kategoria)) echo $kategoria ?></option>
+          <?php 
+          $kategoriaData = $addproduct->merrKategoriteoop($kategoriaid);
+          while($kategoriaa = $addproduct->categories = $kategoriaData->fetch_assoc()){
+            $kategoriaId = $kategoriaa['kategoria_id'];
+            $kategoriaemri = $kategoriaa['emri_kategorise'];
+            echo "<option value='$kategoriaId'>$kategoriaemri</option>";
+          }
+          
+         
+          ?>
+        </select>
   <div id="savedeletecontainer">
     <input type="submit" name="shtoproduktin" id="addproduct" value="ADD PRODUCT">
   </div>

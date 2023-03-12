@@ -1,13 +1,17 @@
 .imagecontainer{
   width: 30%;
   height:  15.479876160990711vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 }
 
 
 #first-product2{
   max-height: 13.415892672858616vh;
-  min-height: 10vh;
+  max-width: 100%;
   padding: 18px 0px;
   display: inline-block;
   
@@ -90,10 +94,15 @@ td:hover{
   margin-left: auto;
   margin-right: auto;
   opacity: 0.6;
+  /* background-color: red; */
  }
 
  #emptyfavorites{
   width: 50%;
+ }
+
+ #emptycart{
+  width: 80%;
  }
 
 

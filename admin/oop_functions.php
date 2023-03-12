@@ -74,12 +74,22 @@ class functions{
     global $dbconn;
     $sql = $dbconn->query("UPDATE produkti SET kategoria_id = '$kategoria'
                            WHERE produkti_id = '$produktiid'");
+     if($dbconn->connect_error){
+      die("Deshtoi modifikimi " .$dbconn->connect_error);
+    }else{
+      echo("<script>location.href = 'admin.php'</script>");
+    }
   }
 
   function editProductsoop($produktiid, $emri, $cmimi, $viti,  $pershkrimi, $prodhuesi){
     global $dbconn;
     $sql = $dbconn->query("UPDATE produkti SET emri='$emri', prodhuesi='$prodhuesi',vitiprodhimit='$viti' ,cmimi= '$cmimi',pershkrimi='$pershkrimi'
                            WHERE produkti_id = '$produktiid'");
+     if($dbconn->connect_error){
+      die("Deshtoi modifikimi " .$dbconn->connect_error);
+    }else{
+      echo("<script>location.href = 'admin.php'</script>");
+    }
   }
 
   function merrKategoriteoop($kategoriaid){
@@ -244,6 +254,13 @@ class functions{
     }else{
       echo("<script>location.href = 'index.php'</script>");
     }
+  }
+
+  function shtoPerdoruesoop($email, $password, $emri, $mbiemri, $dataLindjes, $telefoni, $adresa){
+    global $dbconn;
+    $sql = $dbconn->query("INSERT INTO perdoruesi(email,passwordi, emri, mbiemri, datalindjes, telefoni, adresa) VALUES
+                           ('$email', '$password','$emri','$mbiemri','$dataLindjes','$telefoni','$adresa')");
+  
   }
 
 

@@ -6,7 +6,6 @@
   <div class="middle-footer">
     <h3 id="contact"><a href="help_contact.php" id="contactlink">Contact:</a> </h3>
     <ul id="footer-list">
-    <li><a href="mailto:leartshabani77@gmail.com">leartshabani77@gmail.com</a></li>
     <li><a href="mailto:techshop@gmail.com">techshop@gmail.com</a></li>
     <li><a href="tel:+045359900">045 359 900</a></li>
     
@@ -24,7 +23,7 @@
   
   </div>
   <div class="middle-footer3">
-    <div><a href="aboutus.php" class="footer-links">About us</a></div>
+    <div><a href="#" class="footer-links">About us</a></div>
     <div><a href="#" class="footer-links">Terms and Agreements</a></div>
     <div><a href="#" class="footer-links">Location</a></div>
   </div>

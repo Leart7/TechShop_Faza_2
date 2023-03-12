@@ -56,9 +56,9 @@ if(isset($_POST['register'])){
       $adresserror = "Address is required";
     }
     else{
-      shtoPerdorues($_POST['email'],$_POST['password'],$_POST['emri'],$_POST['mbiemri'],$_POST['datalindjes'],
-      $_POST['numritelefonit'],$_POST['adresa'],);
-      login($_POST['email'],$_POST['password']);
+      $signup->shtoPerdoruesoop($_POST['email'],$_POST['password'],$_POST['emri'],$_POST['mbiemri'],$_POST['datalindjes'],
+      $_POST['numritelefonit'],$_POST['adresa']);
+      $signup->loginoop($_POST['email'],$_POST['password']);
       header("Location: index.php");
     }
    
@@ -132,5 +132,5 @@ if(isset($_POST['register'])){
     </form>
    
  </div>
- <!-- <script defer src="javascript/signup.js"></script> -->
+ <script defer src="javascript/signup.js"></script>
  <?php include 'footer.php'?>
